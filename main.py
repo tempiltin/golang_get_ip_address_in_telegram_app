@@ -326,8 +326,8 @@ CODE_TEMPLATES = [
 ]
 
 def get_commit_dates(year, activity_percent=70):
-    start_date = datetime.date(year, 3, 1)  # Iyul 1
-    end_date = datetime.date(year, 3, 31)   # Iyul 31
+    start_date = datetime.date(year, 4, 1)  # Iyul 1
+    end_date = datetime.date(year, 4, 30)   # Iyul 31
     all_days = [(start_date + datetime.timedelta(days=i)) for i in range((end_date - start_date).days + 1)]
     
     active_days = random.sample(all_days, int(len(all_days) * (activity_percent / 100)))
