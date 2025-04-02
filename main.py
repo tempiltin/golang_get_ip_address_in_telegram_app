@@ -354,7 +354,7 @@ def main():
     commit_dates = get_commit_dates(year)
 
     for date in commit_dates:
-        commit_count = random.randint(3, 10)  
+        commit_count = random.randint(1, 10)  
         commit_and_push(date, commit_count)
         print(f"✅ {date} uchun {commit_count} ta commit qilindi.")
 
