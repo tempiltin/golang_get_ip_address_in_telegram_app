@@ -14,8 +14,8 @@ CODE_TEMPLATES = [
 ]
 
 def get_commit_dates(year, activity_percent=70):
-    start_date = datetime.date(year, 1, 1)
-    end_date = datetime.date(year, 12, 31)
+    start_date = datetime.date(year, 7, 1)  # Iyul 1
+    end_date = datetime.date(year, 7, 31)   # Iyul 31
     all_days = [(start_date + datetime.timedelta(days=i)) for i in range((end_date - start_date).days + 1)]
     
     active_days = random.sample(all_days, int(len(all_days) * (activity_percent / 100)))
@@ -38,7 +38,7 @@ def commit_and_push(date, commit_count):
     os.system("git push")
 
 def main():
-    year = 2015  
+    year = 2025  
     commit_dates = get_commit_dates(year)
 
     for date in commit_dates:
